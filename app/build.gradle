@@ -27,6 +27,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    viewBinding {
+        enabled = true
+    }
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -41,4 +44,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // lottie 사용 *변수 값을 직접 가져오는 경우 Double Quotation 안에서만 사용할 수 있다.*
+    def lottieVersion= "5.2.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 }
